@@ -1,0 +1,41 @@
+
+{
+    "name": "arbitraer/laravel-fresh-seeds",
+    "description": "This package adds a migrate:fresh-seed command with an editable default seeder class, so you can call your most important seeds much more quicker.",
+    "homepage": "https://github.com/arbitraer/laravel-fresh-seeds",
+    "keywords": [
+        "arbitraer",
+        "arbiträr",
+        "laravel-fresh-seeds"
+    ],
+    "authors": [
+        {
+            "name": "Lars Krause",
+            "email": "lars@arbitraer.de",
+            "homepage": "https://arbitraer.de",
+            "role": "Developer"
+        },
+        {
+            "name": "Per Steinhorst",
+            "email": "per@arbitraer.de",
+            "homepage": "https://arbitraer.de",
+            "role": "Developer"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Arbitraer\\FreshSeeds\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Arbitraer\\FreshSeeds\\FreshSeedsServiceProvider"
+            ]
+        }
+    }
+}
