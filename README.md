@@ -79,6 +79,9 @@ php artisan vendor:publish --provider="Arbitraer\FreshSeeds\FreshSeedsServicePro
 ```
 
 ## Testing
+``` bash
+composer test
+```
 
 ## Credits
 
