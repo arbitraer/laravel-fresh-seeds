@@ -11,7 +11,7 @@ return [
     ],
 
     /*
-     * The default suite being used, when running migrate:fresh-seed without a specified suite.
+     * The default suite being used, when running the 'fresh' artisan command without a specified suite.
      */
     'default_suite' => env('SEED_SUITE_DEFAULT', 'basic'),
 ];

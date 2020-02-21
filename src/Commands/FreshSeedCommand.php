@@ -10,7 +10,7 @@ class FreshSeedCommand extends FreshCommand
     /**
      * {@inheritdoc}
      */
-    protected $name = 'migrate:fresh-seed';
+    protected $name = 'fresh';
 
     /**
      * {@inheritdoc}
