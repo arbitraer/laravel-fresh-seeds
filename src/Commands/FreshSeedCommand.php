@@ -2,6 +2,7 @@
 
 namespace Arbitraer\FreshSeeds\Commands;
 
+use Exception;
 use Illuminate\Database\Console\Migrations\FreshCommand;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -46,7 +47,12 @@ class FreshSeedCommand extends FreshCommand
     protected function getSuiteSeederClass()
     {
         $suite = $this->option('suite') ?: config('fresh-seeds.default_suite');
+        $config = config('fresh-seeds.suites.'.$suite);
 
-        return config('fresh-seeds.suites.'.$suite);
+        if (! isset($config)) {
+            throw new Exception("No configuration set for suite `{$suite}`. Make sure this suite is specified in the `fresh-seeds` config file!");
+        }
+
+        return $config;
     }
 }
