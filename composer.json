@@ -1,7 +1,7 @@
 
 {
     "name": "arbitraer/laravel-fresh-seeds",
-    "description": "This package adds the 'fresh' artisan command with an editable default seeder class, so you can call your most important seeds much more quicker.",
+    "description": "This package adds the 'fresh' artisan command with an editable default seeder class, so you can call your most important seeds much more quickly.",
     "homepage": "https://github.com/arbitraer/laravel-fresh-seeds",
     "keywords": [
         "arbitraer",
