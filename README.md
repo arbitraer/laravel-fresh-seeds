@@ -48,6 +48,11 @@ Then you can use the `--suite=` or `-s` option with this command, to specify the
 php artisan fresh -s demo
 ```
 
+Everytime you add a new seeder suite you'll have to perform a composer dump autoload:
+``` bash
+composer dump-autoload
+```
+
 ### Changing the default suite
 
 You can change the default suite to be run when calling `php artisan fresh` by changing the `default_suite` setting in the `fresh-seeds.php` config file or by adding the `SEED_SUITE_DEFAULT` variable to your `.env` file:
