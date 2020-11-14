@@ -15,7 +15,7 @@ class FreshSeedsServiceProvider extends ServiceProvider
         ], 'config');
 
         $this->publishes([
-            __DIR__.'/../seeds/' => database_path('/seeds'),
+            __DIR__.'/../seeders/' => database_path('/seeders'),
         ], 'suites');
     }
 

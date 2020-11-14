@@ -23,7 +23,7 @@ php artisan vendor:publish --provider="Arbitraer\FreshSeeds\FreshSeedsServicePro
 
 ## Usage
 
-To seed the default Laravel database seeder `database/seeds/DatabaseSeeder.php` with a fresh migration:
+To seed the default Laravel database seeder `database/seeders/DatabaseSeeder.php` with a fresh migration:
 
 ``` bash
 php artisan fresh
@@ -31,7 +31,7 @@ php artisan fresh
 
 ### Creating a suite
 
-If you find yourself calling different seeders for different cases (testing, demoing or setting up the application) with a fresh migration, you can create dedicated seeder suites in the `app/config/fresh-seeds.php` config file, referencing a seeder class in `database/seeds/` and then run a fast and easy to remember command:
+If you find yourself calling different seeders for different cases (testing, demoing or setting up the application) with a fresh migration, you can create dedicated seeder suites in the `app/config/fresh-seeds.php` config file, referencing a seeder class in `database/seeders/` and then run a fast and easy to remember command:
 
 ``` php
 ...
@@ -63,18 +63,18 @@ SEED_SUITE_DEFAULT=demo
 
 ### Suggested structure
 
-It can make sense, to move the **table** seeds into single files within a seperate folder in the `database/seeds/` directory and then call them from your seeder suite classes. This way you can easily reuse them from different suites. For example:
+It can make sense, to move the **table** seeds into single files within a seperate folder in the `database/seeders/` directory and then call them from your seeder suite classes. This way you can easily reuse them from different suites. For example:
 
     .
     ├── ...
     ├── database
     │   ├── ...
     │   ├── ...
-    │   └── seeds
+    │   └── seeders
     │      ├── DatabaseSeeder.php
-    │      ├── DemoDatabaseSeeder.php       # custom seeder suite that calls the required table seeders
-    │      └── seeders
-    │           └── PostTableSeeder.php     # a post table seeder callable by different seeder suites
+    │      ├── DemoDatabaseSeeder.php       # custom seeder suite that calls the required table seeds
+    │      └── seeds
+    │           └── PostTableSeeder.php     # a post table seed callable by different seeder suites
     │           └── ...
     └── ...
 
