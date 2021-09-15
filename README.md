@@ -42,7 +42,7 @@ If you find yourself calling different seeders for different cases (testing, dem
 ...
 ```
 
-Then you can use the `--suite=` or `-s` option with this command, to specify the desired seeder suite:
+Then you can use the `--suite=` or `-s` option with this command to specify the desired seeder suite:
 
 ``` bash
 php artisan fresh -s demo
